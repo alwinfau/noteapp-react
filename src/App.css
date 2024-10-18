@@ -1,0 +1,226 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Grid Card untuk menampilkan Notes */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 1280px;
+  /* Tambahkan minimum height agar layout tidak mengecil */
+  min-height: 300px;
+  /* padding: 20px; */
+}
+
+.no-results {
+  width: 1280px;
+  display: flex;
+  flex-direction: column; /* Mengatur flex dalam bentuk kolom */
+  align-items: center;
+}
+
+.no-results svg {
+  width: 60px; /* Mengatur ukuran SVG */
+  height: 60px;
+  margin-right: 8px; /* Memberi jarak antara ikon dan teks */
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  height: 80%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  color: #10b981;
+}
+
+.card p {
+  margin: 0 0 10px;
+  color: #64748b;
+}
+
+.card small {
+  display: block;
+  color: #555;
+}
+
+/* Style form */
+/* App.css */
+
+/* Gaya untuk formulir */
+.search-bar {
+  margin-bottom: 20px;
+}
+/* Gaya untuk formulir */
+.note-form {
+  display: flex;
+  flex-direction: column; /* Menyusun elemen secara vertikal */
+  gap: 20px; /* Jarak antara elemen */
+  width: 100%; /* Pastikan form menggunakan lebar penuh */
+  box-sizing: border-box; /* Pastikan padding dihitung dalam lebar elemen */
+}
+
+input[type="text"],
+textarea {
+  width: 100%; /* Lebar 100% untuk input dan textarea */
+  padding: 10px;
+  margin: 0; /* Hapus margin agar tidak keluar dari form */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box; /* Pastikan padding dihitung dalam lebar elemen */
+}
+
+.submit {
+  width: 12%; /* Lebar 100% untuk tombol */
+  padding: 10px;
+  margin: 0; /* Hapus margin agar tombol sesuai dengan form */
+  background-color: #10b981; /* Warna hijau untuk tombol */
+  color: white;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  box-sizing: border-box; /* Pastikan padding dihitung dalam lebar elemen */
+  display: flex;
+  align-items: center;
+}
+
+.submit:hover {
+  background-color: #059669; /* Sedikit lebih gelap saat hover */
+}
+
+.submit svg {
+  width: 24px; /* Mengatur ukuran SVG */
+  height: 24px;
+  margin-right: 8px; /* Memberi jarak antara ikon dan teks */
+}
+
+.submit:active {
+  background-color: #059669; /* Lebih gelap saat tombol ditekan */
+}
+
+button:hover {
+  background-color: #059669; /* Warna saat tombol dihover */
+}
+
+/* style erro messsage */
+.input-error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 10px;
+  text-align: left;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .notes-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .notes-grid {
+    grid-template-columns: 1fr; /* 1 column for mobile devices */
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  input[type="text"],
+  textarea {
+    font-size: 14px; /* Slightly smaller inputs on mobile */
+  }
+
+  button {
+    font-size: 14px; /* Smaller button text on mobile */
+  }
+}
+
+/* Misc Styles */
+input[type="text"]:focus {
+  border-color: #10b981;
+  outline: none;
+  width: 100%;
+}
+
+/* Optional: Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+  }
+
+  .card {
+    background-color: #2c2c2c;
+    border-color: #444;
+  }
+
+  input[type="text"],
+  textarea {
+    background-color: #333;
+    border-color: #555;
+    color: #f1f1f1;
+  }
+}
